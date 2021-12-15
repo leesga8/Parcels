@@ -11,14 +11,14 @@
 <ul>
 @foreach (Item item in Model)
 {
-  <p>Length: @Item.Length</p>
-  <p>Width: @Item.Width</p>
-  <p>Height: @Item.Height</p>
-  <p>Weight: @Item.Weight</p>
+  <p>Length: @item.Length</p>
+  <p>Width: @item.Width</p>
+  <p>Height: @item.Height</p>
+  <p>Weight: @item.Weight</p>
 
-  <p>Volume: @Item.Volume()</p>
+  <p>Volume: @item.Volume()</p>
   <p>Delivery Charge: Volume + Weight</p>
-  <p>Total Cost: @Item.CostToShip()</p>
+  <p>Total Cost: @item.CostToShip()</p>
 }
 
 <a href="/">Go to HomePage</a>

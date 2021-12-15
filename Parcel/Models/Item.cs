@@ -4,10 +4,10 @@ namespace Parcel.Models
 {
   public class Item
   {
-    public static int Length { get; set; }
-    public static int Width { get; set; }
-    public static int Height { get; set; }
-    public static int Weight { get; set; }
+    public int Length { get; set; }
+    public int Width { get; set; }
+    public int Height { get; set; }
+    public int Weight { get; set; }
   
     public Item (int length, int width, int height, int weight)
     {
@@ -18,13 +18,13 @@ namespace Parcel.Models
 
       _instances.Add(this);
     }
-        public static int Volume()
+    public int Volume()
     {
       int volume = Length*Width*Height;
       return volume;
     }
 
-    public static int CostToShip()
+    public int CostToShip()
     {
       int cost = Length*Width*Height + Weight;
       return cost;
