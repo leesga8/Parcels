@@ -9,7 +9,9 @@ namespace Parcel.Controllers
     [HttpGet("/items")]
        public ActionResult Index()
     {
-      return View();
+      List<Item> allItems = Item.GetAll();
+      return View(allItems);
+      // return View();
     }
 
     [HttpGet("/items/new")]

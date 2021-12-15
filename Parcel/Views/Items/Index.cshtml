@@ -1,18 +1,26 @@
 @using Parcel.Models;
-
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
 <h1>Parcels</h1>
 
+@if (Model.Count == 0)
+{
+  <p>There are no parcel in the list.</p>
+}
 <h2>Here are your dimensions:</h2>
-<p>Length: @Item.Length</p>
-<p>Width: @Item.Width</p>
-<p>Height: @Item.Height</p>
-<p>Weight: @Item.Weight</p>
 
-<p>Volume: @Item.Volume();</p>
-<p>Delivery Charge: Volume + Weight</p>
-<p>Total Cost: @Item.CostToShip();</p>
+<ul>
+@foreach (Item item in Model)
+{
+  <p>Length: @Item.Length</p>
+  <p>Width: @Item.Width</p>
+  <p>Height: @Item.Height</p>
+  <p>Weight: @Item.Weight</p>
 
+  <p>Volume: @Item.Volume()</p>
+  <p>Delivery Charge: Volume + Weight</p>
+  <p>Total Cost: @Item.CostToShip()</p>
+}
 
 <a href="/">Go to HomePage</a>
 <br>
-<a href="/items/new">Ship another parcel.</a>
+<a href="/items/new">Ship another parcel</a>
