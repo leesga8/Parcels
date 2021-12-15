@@ -1,0 +1,18 @@
+@using Parcel.Models;
+
+<h1>Parcels</h1>
+
+<h2>Here are your dimensions:</h2>
+<p>Length: @Item.Length</p>
+<p>Width: @Item.Width</p>
+<p>Height: @Item.Height</p>
+<p>Weight: @Item.Weight</p>
+
+<p>Volume: @Item.Volume();</p>
+<p>Delivery Charge: Volume + Weight</p>
+<p>Total Cost: @Item.CostToShip();</p>
+
+
+<a href="/">Go to HomePage</a>
+<br>
+<a href="/items/new">Ship another parcel.</a>
